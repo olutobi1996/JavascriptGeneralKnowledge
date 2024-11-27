@@ -41,7 +41,17 @@
             </div>
 
         </div>
-        
+
+            <div hidden id=score-card class="card">
+            <h2>Well Done!</h2>
+            <p>Your final score is...<span id=score></span>.</p>
+            <form class="inline-form" id="submission-form">
+                  <label for="initials">Enter initials: </label>
+                  <input type="text" id="initials">
+                  <button id="submit-button" class="button">Submit</button>
+            </form>
+        </div>
+
       </main>
       <!-- Script JS file -->
       <script src="assets/js/script.js"></script>
