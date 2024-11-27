@@ -33,6 +33,15 @@
                 <button id=option2 class="button option-button"></button>
                 <button id=option3 class="button option-button"></button>
             </div>
+
+            
+            <div id=result-div>
+                <hr>
+                <p id=result-text></p>
+            </div>
+
+        </div>
+        
       </main>
       <!-- Script JS file -->
       <script src="assets/js/script.js"></script>
