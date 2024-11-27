@@ -52,6 +52,16 @@
             </form>
         </div>
 
+          <div hidden id=leaderboard-card class="card">
+            <h2>Highscores</h2>
+            <ol id="highscore-list">
+            </ol>
+            <div class="inline-buttons">
+                <button id="back-button" class="button">Go Back</button>
+                <button id="clear-button" class="button">Clear Highscores</button>
+            </div>
+        </div>
+
       </main>
       <!-- Script JS file -->
       <script src="assets/js/script.js"></script>
