@@ -15,13 +15,24 @@
          <time>Time: <span id="time"></span></time>
       </header>
       <main>
-         <div id=start-card class="card">
+         <div id=start-box class="box">
             <h2 id=title>Welcome To General Knowledge Quiz</h2>
             <p>Answer the following quiz questions best you can!
                <br><br>Incorrect answers will effect your time, be careful!!
             </p>
             <button id=start-button class="button">Start Quiz</button>
          </div>
+
+         <div hidden id=question-box class="card">
+
+            <h2 id=question-text></h2>
+
+            <div id=quiz-options>
+                <button id=option0 class="button option-button"></button>
+                <button id=option1 class="button option-button"></button>
+                <button id=option2 class="button option-button"></button>
+                <button id=option3 class="button option-button"></button>
+            </div>
       </main>
       <!-- Script JS file -->
       <script src="assets/js/script.js"></script>
