@@ -77,10 +77,22 @@ main {
   display: none;
 }
 
-/* Score Card Styles */
+/* Score card styles */
 
 .inline-form {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+}
+
+#initials {
+  width: 30%;
+  margin: 12px;
+  padding: 4vh;
+}
+
+/* Leaderboard card styles */
+
+#back-button {
+  margin-right: 12px;
 }
