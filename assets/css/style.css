@@ -40,3 +40,20 @@ main {
   border-radius: 12px;
   border: none;
 }
+
+.inline-buttons {
+  display: inline-flex;
+}
+
+/* Box styles */
+
+.box {
+  max-width: 90%;
+  margin-top: 20vh;
+  border: solid;
+  border-width: 8px;
+  padding: 8vw;
+  border-radius: 40px;
+  border-color: rgb(60, 178, 252);
+  box-shadow: 12px 8px 8px #2fd7fd;
+}
