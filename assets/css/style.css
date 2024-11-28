@@ -6,3 +6,18 @@ body {
     margin: 0px;
   }
   
+  /* Header styles  */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #571bd8;
+  color: #e14ada;
+  padding: 3vh;
+}
+
+/* Time style*/
+
+time {
+  min-width: 85px;
+}
