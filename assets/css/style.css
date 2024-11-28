@@ -96,3 +96,15 @@ main {
 #back-button {
   margin-right: 12px;
 }
+
+.highscore-list {
+  padding-inline-start: 20px;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 800px) {
+  .card {
+    max-width: 660px;
+  }
+}
