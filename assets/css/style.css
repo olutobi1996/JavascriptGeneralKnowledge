@@ -72,3 +72,15 @@ main {
   text-align: left;
   margin: 10px;
 }
+
+#result-div {
+  display: none;
+}
+
+/* Score Card Styles */
+
+.inline-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
