@@ -19,5 +19,24 @@ header {
 /* Time style*/
 
 time {
-  min-width: 85px;
+  min-width: 60px;
+}
+
+/* Styles for main element */
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button styles */
+
+.button {
+  display: block;
+  color: rgba(132, 21, 210, 0.733);
+  background-color: rgb(191, 22, 213);
+  padding: 5vh;
+  border-radius: 12px;
+  border: none;
 }
