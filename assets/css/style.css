@@ -57,3 +57,18 @@ main {
   border-color: rgb(60, 178, 252);
   box-shadow: 12px 8px 8px #2fd7fd;
 }
+
+/* Start Card Styles */
+
+#start-box {
+  display: inline;
+  text-align: center;
+}
+
+/* Question Card Styles */
+
+.option-button {
+  width: 100%;
+  text-align: left;
+  margin: 10px;
+}
