@@ -84,3 +84,18 @@ const startCard = document.querySelector("#start-box");
 const questionCard = document.querySelector("#question-card");
 const scoreCard = document.querySelector("#score-card");
 const leaderboardCard = document.querySelector("#leaderboard-card");
+const resultDiv = document.querySelector("#result-div");
+const resultText = document.querySelector("#result-text");
+
+//hide box attribue
+function hideBox() {
+    startCard.setAttribute("hidden", true);
+    questionCard.setAttribute("hidden", true);
+    scoreCard.setAttribute("hidden", true);
+    leaderboardCard.setAttribute("hidden", true);
+  }
+  
+  //hide result div
+  function hideResultText() {
+    resultDiv.style.display = "none";
+  }
