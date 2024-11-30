@@ -78,3 +78,9 @@ const questions = [
       ],
   },
 ];
+
+//const variables
+const startCard = document.querySelector("#start-box");
+const questionCard = document.querySelector("#question-card");
+const scoreCard = document.querySelector("#score-card");
+const leaderboardCard = document.querySelector("#leaderboard-card");
