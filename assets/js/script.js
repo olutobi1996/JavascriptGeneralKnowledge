@@ -87,6 +87,11 @@ const leaderboardCard = document.querySelector("#leaderboard-card");
 const resultDiv = document.querySelector("#result-div");
 const resultText = document.querySelector("#result-text");
 
+  //global variables
+  let intervalID;
+  let time;
+  let currentQuestion;
+
 //hide box attribue
 function hideBox() {
     startCard.setAttribute("hidden", true);
@@ -99,3 +104,7 @@ function hideBox() {
   function hideResultText() {
     resultDiv.style.display = "none";
   }
+
+
+
+document.querySelector("#start-button").addEventListener("click", startQuiz);
