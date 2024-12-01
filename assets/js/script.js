@@ -108,3 +108,31 @@ function hideBox() {
 
 
 document.querySelector("#start-button").addEventListener("click", startQuiz);
+
+ //hide any boxes and show question
+function startQuiz() {
+    hideBox();
+    questionCard.removeAttribute("hidden");
+  
+    //current question starts at 0
+    currentQuestion = 0;
+    displayQuestion();
+  
+    //total time depending on question
+    time = questions.length * 10;
+  
+    //countdown every 1000ms to update time and display on page
+    intervalID = setInterval(countdown, 1000);
+  
+    //display time as soon as page is clicked
+    displayTime();
+  }
+  
+  //countdown by 1 and quiz will end if time runs out
+  function countdown() {
+    time--;
+    displayTime();
+    if (time < 1) {
+      endQuiz();
+    }
+  }
