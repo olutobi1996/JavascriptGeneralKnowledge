@@ -245,4 +245,29 @@ function updateStoredLeaderboard(leaderboardItem) {
     leaderboardArray.push(leaderboardItem);
     localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
   }
-  
+
+//get "leaderboardArray" (if exists) from local storage & parse it into a javascript obj using JSON.parse
+function getLeaderboard() {
+  let storedLeaderboard = localStorage.getItem("leaderboardArray");
+  if (storedLeaderboard !== null) {
+    let leaderboardArray = JSON.parse(storedLeaderboard);
+    return leaderboardArray;
+  } else {
+    leaderboardArray = [];
+  }
+  return leaderboardArray;
+}
+
+//display leaderboard on leaderboard card
+function renderLeaderboard() {
+  let sortedLeaderboardArray = sortLeaderboard();
+  const highscoreList = document.querySelector("#highscore-list");
+  highscoreList.innerHTML = "";
+  for (let i = 0; i < sortedLeaderboardArray.length; i++) {
+    let leaderboardEntry = sortedLeaderboardArray[i];
+    let newListItem = document.createElement("li");
+    newListItem.textContent =
+      leaderboardEntry.initials + " - " + leaderboardEntry.score;
+    highscoreList.append(newListItem);
+  }
+}
