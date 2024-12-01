@@ -88,6 +88,9 @@ const resultDiv = document.querySelector("#result-div");
 const resultText = document.querySelector("#result-text");
 const submitButton = document.querySelector("#submit-button");
 const inputElement = document.querySelector("#initials");
+const clearButton = document.querySelector("#clear-button");
+const backButton = document.querySelector("#back-button");
+
 
   //global variables
   let intervalID;
@@ -283,4 +286,19 @@ function sortLeaderboard() {
     return b.score - a.score;
   });
   return leaderboardArray;
+}
+
+clearButton.addEventListener("click", clearHighscores);
+//clear high score
+function clearHighscores() {
+  localStorage.clear();
+  renderLeaderboard();
+}
+
+backButton.addEventListener("click", returnToStart);
+
+//show start card
+function returnToStart() {
+  hideCards();
+  startCard.removeAttribute("hidden");
 }
