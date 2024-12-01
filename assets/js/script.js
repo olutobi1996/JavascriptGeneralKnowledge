@@ -86,6 +86,8 @@ const scoreCard = document.querySelector("#score-card");
 const leaderboardCard = document.querySelector("#leaderboard-card");
 const resultDiv = document.querySelector("#result-div");
 const resultText = document.querySelector("#result-text");
+const submitButton = document.querySelector("#submit-button");
+const inputElement = document.querySelector("#initials");
 
   //global variables
   let intervalID;
@@ -206,4 +208,32 @@ function endQuiz() {
   hideCards();
   scoreCard.removeAttribute("hidden");
   score.textContent = time;
+}
+
+// user initials and score when submit button is clicked
+submitButton.addEventListener("click", storeScore);
+
+function storeScore(event) {
+  //prevent default behaviour of form submission
+  event.preventDefault();
+
+  //check for input
+  if (!inputElement.value) {
+    alert("Please enter your initials before pressing submit!");
+    return;
+  }
+
+  //store score and initials in object
+  let leaderboardItem = {
+    initials: inputElement.value,
+    score: time,
+  };
+
+  updateStoredLeaderboard(leaderboardItem);
+
+  //hide the question card, display the leaderboardcard
+  hideCards();
+  leaderboardCard.removeAttribute("hidden");
+
+  renderLeaderboard();
 }
