@@ -302,3 +302,19 @@ function returnToStart() {
   hideCards();
   startCard.removeAttribute("hidden");
 }
+
+//use link to view highscores from any point on the page
+const leaderboardLink = document.querySelector("#leaderboard-link");
+leaderboardLink.addEventListener("click", showLeaderboard);
+
+function showLeaderboard() {
+  hideCards();
+  leaderboardCard.removeAttribute("hidden");
+  //stop countdown
+  clearInterval(intervalID);
+  //assign undefined to time and display that, so that time does not appear on page
+  time = undefined;
+  displayTime();
+  //display leaderboard
+  renderLeaderboard();
+}
