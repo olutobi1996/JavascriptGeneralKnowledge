@@ -158,3 +158,32 @@ function displayQuestion() {
   }
 }
 
+//event listner for when answer button clicked
+document.querySelector("#quiz-options").addEventListener("click", checkAnswer);
+
+//option function compare option to current question
+function optionIsCorrect(optionButton) {
+  return optionButton.textContent === questions[currentQuestion].answer;
+}
+
+//if answer is incorrect,  time is added
+function checkAnswer(eventObject) {
+  let optionButton = eventObject.target;
+  resultDiv.style.display = "block";
+  if (optionIsCorrect(optionButton)) {
+    resultText.textContent = "Correct!";
+    setTimeout(hideResultText, 1000);
+  } else {
+    resultText.textContent = "Incorrect!";
+    setTimeout(hideResultText, 1000);
+    if (time >= 10) {
+      time = time - 10;
+      displayTime();
+    } else {
+      //if time is less than 10, display time as 0 and end quiz
+      time = 0;
+      displayTime();
+      endQuiz();
+    }
+  }
+}
