@@ -237,3 +237,12 @@ function storeScore(event) {
 
   renderLeaderboard();
 }
+
+//updates the leaderboard stored, in localally 
+function updateStoredLeaderboard(leaderboardItem) {
+    let leaderboardArray = getLeaderboard();
+    //append new leaderboard item to leaderboard array
+    leaderboardArray.push(leaderboardItem);
+    localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
+  }
+  
