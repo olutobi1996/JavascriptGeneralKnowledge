@@ -271,3 +271,16 @@ function renderLeaderboard() {
     highscoreList.append(newListItem);
   }
 }
+
+//sort leaderboard array from highest to lowest
+function sortLeaderboard() {
+  let leaderboardArray = getLeaderboard();
+  if (!leaderboardArray) {
+    return;
+  }
+
+  leaderboardArray.sort(function (a, b) {
+    return b.score - a.score;
+  });
+  return leaderboardArray;
+}
