@@ -187,3 +187,23 @@ function checkAnswer(eventObject) {
     }
   }
 }
+
+  //increment current question by 1
+  currentQuestion++;
+  //if we have not run out of questions then display next question, else end quiz
+  if (currentQuestion < questions.length) {
+    displayQuestion();
+  } else {
+    endQuiz();
+  }
+
+//display scorecard & hide other divs
+const score = document.querySelector("#score");
+
+//at end of quiz, clear the timer, hide sore card
+function endQuiz() {
+  clearInterval(intervalID);
+  hideCards();
+  scoreCard.removeAttribute("hidden");
+  score.textContent = time;
+}
