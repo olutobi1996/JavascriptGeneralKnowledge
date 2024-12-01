@@ -136,3 +136,25 @@ function startQuiz() {
       endQuiz();
     }
   }
+
+  //display time on page
+const timeDisplay = document.querySelector("#time");
+function displayTime() {
+  timeDisplay.textContent = time;
+}
+
+//display the question & answer options for the current question
+function displayQuestion() {
+  let question = questions[currentQuestion];
+  let options = question.options;
+
+  let h2QuestionElement = document.querySelector("#question-text");
+  h2QuestionElement.textContent = question.questionText;
+
+  for (let i = 0; i < options.length; i++) {
+    let option = options[i];
+    let optionButton = document.querySelector("#option" + i);
+    optionButton.textContent = option;
+  }
+}
+
