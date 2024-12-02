@@ -1,8 +1,7 @@
 /* Body style */
-
 body {
     font-family: Verdana;
-    background-color: #ffffff;
+    background-color: #2fd7fd;
     margin: 0px;
   }
   
@@ -34,8 +33,8 @@ main {
 
 .button {
   display: block;
-  color: rgba(132, 21, 210, 0.733);
-  background-color: rgb(191, 22, 213);
+  color: #fff;
+  background-color: #d9d9d9;
   padding: 5vh;
   border-radius: 12px;
   border: none;
@@ -54,8 +53,8 @@ main {
   border-width: 8px;
   padding: 8vw;
   border-radius: 40px;
-  border-color: rgb(60, 178, 252);
-  box-shadow: 12px 8px 8px #2fd7fd;
+  border-color: #317aa7;
+  box-shadow: 12px 8px 8px #63a2b0;
 }
 
 /* Start Card Styles */
@@ -122,7 +121,7 @@ footer {
 /* Media query that specifies devices that can utilize hover */
 @media (hover) {
   a:hover {
-    color: hwb(270 22% 0%);
+    color: rgb(219, 194, 245);
   }
 
   button:hover {
