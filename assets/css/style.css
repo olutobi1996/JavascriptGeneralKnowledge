@@ -34,8 +34,8 @@ main {
 .button {
   display: block;
   color: #fff;
-  background-color: #d9d9d9;
-  padding: 5vh;
+  background-color: hsl(279, 79%, 55%);
+  padding: 2vh;
   border-radius: 12px;
   border: none;
 }
@@ -104,17 +104,16 @@ main {
 footer {
   margin-top: auto;
   display: flex;
-  width: 100vh;
+  width: 100%;
   display: block;
-  flex-direction: column;
-  position: fixed;
+  position: sticky;
 }
 
 /* Media Queries */
 
-@media screen and (min-width: 850px) {
+@media only screen and (max-width: 600px) {
   .box {
-    max-width: 680px;
+  background-color: #fff;
   }
 }
 
