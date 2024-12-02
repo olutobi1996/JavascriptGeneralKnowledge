@@ -88,7 +88,7 @@ document.querySelector("#start-button").addEventListener("click", startQuiz);
  //hide any boxes and show question
 function startQuiz() {
     hideBox();
-    questionCard.removeAttribute("hidden");
+    questionBox.removeAttribute("hidden");
   
     //current question starts at 0
     currentQuestion = 0;
@@ -179,7 +179,7 @@ const score = document.querySelector("#score");
 //at end of quiz, clear the timer, hide sore card
 function endQuiz() {
   clearInterval(intervalID);
-  hideCards();
+  hideBoxs();
   scoreCard.removeAttribute("hidden");
   score.textContent = time;
 }
@@ -206,7 +206,7 @@ function storeScore(event) {
   updateStoredLeaderboard(leaderboardItem);
 
   //hide the question card, display the leaderboardcard
-  hideCards();
+  hideBoxs();
   leaderboardCard.removeAttribute("hidden");
 
   renderLeaderboard();
@@ -268,9 +268,9 @@ function clearHighscores() {
 
 backButton.addEventListener("click", returnToStart);
 
-//show start card
+//show start box
 function returnToStart() {
-  hideCards();
+  hideBoxs();
   startCard.removeAttribute("hidden");
 }
 
@@ -279,7 +279,7 @@ const leaderboardLink = document.querySelector("#leaderboard-link");
 leaderboardLink.addEventListener("click", showLeaderboard);
 
 function showLeaderboard() {
-  hideCards();
+  hideBoxs();
   leaderboardCard.removeAttribute("hidden");
   //stop countdown
   clearInterval(intervalID);

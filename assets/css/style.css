@@ -101,11 +101,21 @@ main {
   padding-inline-start: 20px;
 }
 
+/* footer */
+footer {
+  margin-top: auto;
+  display: flex;
+  width: 100vh;
+  display: block;
+  flex-direction: column;
+  position: fixed;
+}
+
 /* Media Queries */
 
-@media screen and (min-width: 800px) {
-  .card {
-    max-width: 660px;
+@media screen and (min-width: 850px) {
+  .box {
+    max-width: 680px;
   }
 }
 

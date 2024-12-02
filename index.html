@@ -1,69 +1,96 @@
-<!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./assets/css/style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-      <title>General Knowledge Quiz</title>
-      <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
-   </head>
-   <body>
-      <header>
-         <a id=leaderboard-link>Check Your Highscores! <i class="fas fa-hand-point-left fa-lg"></i>
-         </i></a> 
-         <time>Time: <span id="time"></span></time>
-      </header>
-      <main>
-         <div id=start-box class="box">
-            <h2 id=title>Welcome To General Knowledge Quiz</h2>
-            <p>Answer the following quiz questions best you can!
-               <br><br>Incorrect answers will effect your time, be careful!!
-            </p>
-            <button id=start-button class="button">Start Quiz</button>
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./assets/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+   <title>Javascript Quiz</title>
+   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+   <!-- Header at the top of the page -->
+   <header>
+      <a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
+         </i></a>
+
+      <time>Time: <span id="time"></span></time>
+   </header>
+
+   <main>
+
+      <!-- Start Card -->
+      <div id=start-card class="card">
+         <h2 id=title>General Knowledge Quiz</h2>
+         <p>Try to answer to following code-related questions within the time limit. <br><br> Keep in mind that
+            incorrect answers will penalize your score/time by ten seconds!</p>
+         <button id=start-button class="button">Start Quiz</button>
+      </div>
+
+      <!-- Question Card -->
+      <div hidden id=question-card class="card">
+
+         <!-- Quiz Question & Options -->
+
+         <h2 id=question-text></h2>
+
+         <div id=quiz-options>
+            <button id=option0 class="button option-button"></button>
+            <button id=option1 class="button option-button"></button>
+            <button id=option2 class="button option-button"></button>
+            <button id=option3 class="button option-button"></button>
          </div>
 
-         <div hidden id=question-box class="card">
+         <div id=result-div>
+            <hr>
+            <p id=result-text></p>
+         </div>
 
-            <h2 id=question-text></h2>
+      </div>
 
-            <div id=quiz-options>
-                <button id=option0 class="button option-button"></button>
-                <button id=option1 class="button option-button"></button>
-                <button id=option2 class="button option-button"></button>
-                <button id=option3 class="button option-button"></button>
-            </div>
+      <!-- Score -->
+      <div hidden id=score-card class="card">
+         <h2>All done!</h2>
+         <p>Your final score is <span id=score></span>.</p>
 
-            
-            <div id=result-div>
-                <hr>
-                <p id=result-text></p>
-            </div>
+         <!-- Form -->
 
-        </div>
+         <form class="inline-form" id="submission-form">
+            <label for="initials">Enter initials: </label>
+            <input type="text" id="initials">
+            <button id="submit-button" class="button">Submit</button>
+         </form>
+      </div>
 
-            <div hidden id=score-card class="card">
-            <h2>Well Done!</h2>
-            <p>Your final score is...<span id=score></span>.</p>
-            <form class="inline-form" id="submission-form">
-                  <label for="initials">Enter initials: </label>
-                  <input type="text" id="initials">
-                  <button id="submit-button" class="button">Submit</button>
-            </form>
-        </div>
+      <!-- Leaderboard -->
+      <div hidden id=leaderboard-card class="card">
+         <h2>Highscores</h2>
+         <ol id="highscore-list">
+         </ol>
 
-          <div hidden id=leaderboard-card class="card">
-            <h2>Highscores</h2>
-            <ol id="highscore-list">
-            </ol>
-            <div class="inline-buttons">
-                <button id="back-button" class="button">Go Back</button>
-                <button id="clear-button" class="button">Clear Highscores</button>
-            </div>
-        </div>
+         <!-- Buttons   -->
+         <div class="inline-buttons">
+            <button id="back-button" class="button">Go Back</button>
+            <button id="clear-button" class="button">Clear Highscores</button>
+         </div>
+      </div>
 
-      </main>
-      <!-- Script JS file -->
-      <script src="assets/js/script.js"></script>
-   </body>
+   </main>
+
+   <!-- Footer -->
+   <footer>
+      <p>Creator: Olutobi Adebayo-Rowling<br>
+         <a href="mailto:olutobi1997@icloud.com">olutobi1997@icloud.com</a>
+      </p>
+      </ul>
+   </footer>
+
+
+
+   <!-- Script JS file -->
+   <script src="./assets/js/script.js"></script>
+</body>
+
 </html>
