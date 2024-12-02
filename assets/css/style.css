@@ -60,7 +60,7 @@ main {
 
 /* Start Card Styles */
 
-#start-box {
+#start-screen {
   display: inline;
   text-align: center;
 }
@@ -106,5 +106,16 @@ main {
 @media screen and (min-width: 800px) {
   .card {
     max-width: 660px;
+  }
+}
+
+/* Media query that specifies devices that can utilize hover */
+@media (hover) {
+  a:hover {
+    color: hwb(270 22% 0%);
+  }
+
+  button:hover {
+    background-color: rgba(143, 21, 223, 0.5);
   }
 }

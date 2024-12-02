@@ -1,81 +1,53 @@
-/* These are the const Quiz Questions
- will will remain the same throughout,
- This section of code was also adapted from a
- quiz video online i have referenced in my README.MD
-*/
 const questions = [
   {
-      question: "what football team won the world cup in 1966?",
-      answers: [
-          {text: "England", correct: true},
-          {text: "Germany", correct: false},
-          {text: "Brazil", correct: false},
-          {text: "France", correct: false},
-      ],
+    questionText: "what football team won the world cup in 1966?:",
+    options: ["1. Brazil", "2. England", "3. France", "4. Italy"],
+    answer: "2. alerts",
   },
   {
-      question: "How many coloured rings in the Olympic Flag?",
-      answers: [
-          {text: "2", correct: false},
-          {text: "6", correct: false},
-          {text: "4", correct: false},
-          {text: "5", correct: true},
-      ],
+    questionText: "How many coloured rings in the Olympic Flag ______.",
+    options: [
+      "1. Two",
+      "2. Three",
+      "3. Four",
+      "4.Five",
+    ],
+    answer: "4. Five",
   },
   {
-      question: "Who directed the film pulp fiction?",
-      answers: [
-          {text: "Daniel Day Lewis", correct: false},
-          {text: "Quentin Taratino", correct: true},
-          {text: "Steven Speilberg", correct: false},
-          {text: "Martin Scorses", correct: false},
-      ],
+    questionText:
+      "In the film Lion King Mufasa dies from being trampled on by a pack of?",
+    options: ["1. sheep", "2. hyenas", "3. wildebeests", "4. bears"],
+    answer: "3. quotes",
   },
   {
-      question:
-          "In the film Lion King Mufasa dies from being trampled on by a pack of?",
-      answers: [
-          {text: "sheep", correct: false},
-          {text: "hyenas", correct: false},
-          {text: "wildebeests", correct: true},
-          {text: "bears", correct: false},
-      ],
+    questionText:
+      "Who directed the film pulp fiction?:",
+    options: [
+      "1. Daniel Day Lewis",
+      "2. Steven Speilberg",
+      "3. Steven Speilberg",
+      "4. Quentin Taratino",
+    ],
+    answer: "4. five",
   },
   {
-      question: "Who wrote the novel of mice and men?",
-      answers: [
-          {text: "Virginia Woolf", correct: false},
-          {text: "Elaine Anderson", correct: false},
-          {text: "William Faulkner", correct: false},
-          {text: "John Steinbeck", correct: true},
-      ],
+    questionText:
+      "What is the name of the fourth book in the Harry Potter Series?",
+    options: ["1. Harry Potter and the Goblet of Fire", "2. Harry Potter and the Deathly Hallows", "3. Harry Potter and Philosophers Stone", "4. Harry Potter and Half Blood Prince"],
+    answer: "1. break",
   },
   {
-      question: "What is the name of the fourth book in the Harry Potter Series?",
-      answers: [
-          {text: "Harry Potter and the Goblet of Fire", correct: true},
-          {text: "Harry Potter and the Deathly Hallows", correct: false},
-          {text: "Harry Potter and Philosophers Stone", correct: false},
-          {text: "Harry Potter and Half Blood Prince", correct: false},
-      ],
+    questionText:
+      "Where did sushi originate?",
+    options: ["1. China", "2. America", "3. Italy", "4. Japan"],
+    answer: "4. break",
   },
   {
-      question: "What year did world war II end?",
-      answers: [
-          {text: "1950", correct: false},
-          {text: "1945", correct: true},
-          {text: "1960", correct: false},
-          {text: "1940", correct: false},
-      ],
-  },
-  {
-      question: "Where did sushi originate?",
-      answers: [
-          {text: "China", correct: false},
-          {text: "Fiji", correct: false},
-          {text: "South Korea", correct: false},
-          {text: "Japan", correct: true},
-      ],
+    questionText:
+      "What year did world war II end?",
+    options: ["1. 1945", "2. 1912", "3. 1935", "4. 1942"],
+    answer: "1. break",
   },
 ];
 
@@ -98,7 +70,7 @@ const backButton = document.querySelector("#back-button");
   let currentQuestion;
 
 //hide box attribue
-function hideBox() {
+function hideBoxs() {
     startCard.setAttribute("hidden", true);
     questionCard.setAttribute("hidden", true);
     scoreCard.setAttribute("hidden", true);
@@ -109,7 +81,6 @@ function hideBox() {
   function hideResultText() {
     resultDiv.style.display = "none";
   }
-
 
 
 document.querySelector("#start-button").addEventListener("click", startQuiz);
@@ -303,7 +274,7 @@ function returnToStart() {
   startCard.removeAttribute("hidden");
 }
 
-//use link to view highscores from any point on the page
+//use link to view highscores from any where on the page
 const leaderboardLink = document.querySelector("#leaderboard-link");
 leaderboardLink.addEventListener("click", showLeaderboard);
 
@@ -318,3 +289,4 @@ function showLeaderboard() {
   //display leaderboard
   renderLeaderboard();
 }
+
