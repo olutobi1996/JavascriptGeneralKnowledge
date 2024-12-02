@@ -53,7 +53,7 @@ const questions = [
 
 //const variables
 const startCard = document.querySelector("#start-box");
-const questionCard = document.querySelector("#question-card");
+const questionCard = document.querySelector("#question-box");
 const scoreCard = document.querySelector("#score-card");
 const leaderboardCard = document.querySelector("#leaderboard-card");
 const resultDiv = document.querySelector("#result-div");
@@ -65,14 +65,14 @@ const backButton = document.querySelector("#back-button");
 
 
   //global variables
-  let intervalID;
-  let time;
-  let currentQuestion;
+  var intervalID;
+  var time;
+  var currentQuestion;
 
 //hide box attribue
 function hideBoxs() {
-    startCard.setAttribute("hidden", true);
-    questionCard.setAttribute("hidden", true);
+    startBox.setAttribute("hidden", true);
+    questionBox.setAttribute("hidden", true);
     scoreCard.setAttribute("hidden", true);
     leaderboardCard.setAttribute("hidden", true);
   }
