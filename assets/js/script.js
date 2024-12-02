@@ -52,74 +52,72 @@ const questions = [
 ];
 
 //const variables
-const startCard = document.querySelector("#start-box");
-const questionCard = document.querySelector("#question-box");
+const startCard = document.querySelector("#start-card");
+const questionCard = document.querySelector("#question-card");
 const scoreCard = document.querySelector("#score-card");
 const leaderboardCard = document.querySelector("#leaderboard-card");
+
+
+//hide cards
+function hideCards() {
+  startCard.setAttribute("hidden", true);
+  questionCard.setAttribute("hidden", true);
+  scoreCard.setAttribute("hidden", true);
+  leaderboardCard.setAttribute("hidden", true);
+}
+
+//const result
 const resultDiv = document.querySelector("#result-div");
 const resultText = document.querySelector("#result-text");
-const submitButton = document.querySelector("#submit-button");
-const inputElement = document.querySelector("#initials");
-const clearButton = document.querySelector("#clear-button");
-const backButton = document.querySelector("#back-button");
 
+//hide result div
+function hideResultText() {
+  resultDiv.style.display = "none";
+}
 
-  //global variables
-  var intervalID;
-  var time;
-  var currentQuestion;
+//these variables are required globally
+var intervalID;
+var time;
+var currentQuestion;
 
-//hide box attribue
-function hideBoxs() {
-    startBox.setAttribute("hidden", true);
-    questionBox.setAttribute("hidden", true);
-    scoreCard.setAttribute("hidden", true);
-    leaderboardCard.setAttribute("hidden", true);
-  }
-  
-  //hide result div
-  function hideResultText() {
-    resultDiv.style.display = "none";
-  }
-
-
+//start button event listner
 document.querySelector("#start-button").addEventListener("click", startQuiz);
 
- //hide any boxes and show question
+//hide any visible cards, show the question card
 function startQuiz() {
-    hideBox();
-    questionBox.removeAttribute("hidden");
-  
-    //current question starts at 0
-    currentQuestion = 0;
-    displayQuestion();
-  
-    //total time depending on question
-    time = questions.length * 10;
-  
-    //countdown every 1000ms to update time and display on page
-    intervalID = setInterval(countdown, 1000);
-  
-    //display time as soon as page is clicked
-    displayTime();
-  }
-  
-  //countdown by 1 and quiz will end if time runs out
-  function countdown() {
-    time--;
-    displayTime();
-    if (time < 1) {
-      endQuiz();
-    }
-  }
+  hideCards();
+  questionCard.removeAttribute("hidden");
 
-  //display time on page
+  //assign 0 to currentQuestion, then display the current question on the page
+  currentQuestion = 0;
+  displayQuestion();
+
+  //set total time depending on number of questions
+  time = questions.length * 10;
+
+  //executes function "countdown" every 1000ms to update time and display on page
+  intervalID = setInterval(countdown, 1000);
+
+  //invoke displayTime here to ensure time appears on the page asap
+  displayTime();
+}
+
+//reduce time by 1 display new value,  if run out, end quiz
+function countdown() {
+  time--;
+  displayTime();
+  if (time < 1) {
+    endQuiz();
+  }
+}
+
+//display time on page
 const timeDisplay = document.querySelector("#time");
 function displayTime() {
   timeDisplay.textContent = time;
 }
 
-//display the question & answer options for the current question
+//display the question & answer options for current question
 function displayQuestion() {
   let question = questions[currentQuestion];
   let options = question.options;
@@ -134,15 +132,15 @@ function displayQuestion() {
   }
 }
 
-//event listner for when answer button clicked
+// when an answer button is clicked: click event bubbles up to div
 document.querySelector("#quiz-options").addEventListener("click", checkAnswer);
 
-//option function compare option to current question
+//Compare text content of the option btn with the answer to the current Quest
 function optionIsCorrect(optionButton) {
   return optionButton.textContent === questions[currentQuestion].answer;
 }
 
-//if answer is incorrect,  time is added
+//if answer is incorrect, effect time
 function checkAnswer(eventObject) {
   let optionButton = eventObject.target;
   resultDiv.style.display = "block";
@@ -162,29 +160,32 @@ function checkAnswer(eventObject) {
       endQuiz();
     }
   }
-}
 
-  //increment current question by 1
+  //add current question by 1
   currentQuestion++;
-  //if we have not run out of questions then display next question, else end quiz
+  //if  not run out of questions then display next question, end quiz
   if (currentQuestion < questions.length) {
     displayQuestion();
   } else {
     endQuiz();
   }
+}
 
-//display scorecard & hide other divs
+//display scorecard and hide other divs
 const score = document.querySelector("#score");
 
-//at end of quiz, clear the timer, hide sore card
+//at end of quiz, clear timer, hide any visible cards & display score cards
 function endQuiz() {
   clearInterval(intervalID);
-  hideBoxs();
+  hideCards();
   scoreCard.removeAttribute("hidden");
   score.textContent = time;
 }
 
-// user initials and score when submit button is clicked
+const submitButton = document.querySelector("#submit-button");
+const inputElement = document.querySelector("#initials");
+
+//store user initials and score when submit button is clicked
 submitButton.addEventListener("click", storeScore);
 
 function storeScore(event) {
@@ -197,7 +198,7 @@ function storeScore(event) {
     return;
   }
 
-  //store score and initials in object
+  //store score and initials in an object
   let leaderboardItem = {
     initials: inputElement.value,
     score: time,
@@ -205,22 +206,22 @@ function storeScore(event) {
 
   updateStoredLeaderboard(leaderboardItem);
 
-  //hide the question card, display the leaderboardcard
-  hideBoxs();
+  //hide the question card, display leaderboardcard
+  hideCards();
   leaderboardCard.removeAttribute("hidden");
 
   renderLeaderboard();
 }
 
-//updates the leaderboard stored, in localally 
+//updates the leaderboard stored in loccaly
 function updateStoredLeaderboard(leaderboardItem) {
-    let leaderboardArray = getLeaderboard();
-    //append new leaderboard item to leaderboard array
-    leaderboardArray.push(leaderboardItem);
-    localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
-  }
+  let leaderboardArray = getLeaderboard();
+  //append new leaderboard item to leaderboard array
+  leaderboardArray.push(leaderboardItem);
+  localStorage.setItem("leaderboardArray", JSON.stringify(leaderboardArray));
+}
 
-//get "leaderboardArray" (if exists) from local storage & parse it into a javascript obj using JSON.parse
+//get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse
 function getLeaderboard() {
   let storedLeaderboard = localStorage.getItem("leaderboardArray");
   if (storedLeaderboard !== null) {
@@ -259,34 +260,39 @@ function sortLeaderboard() {
   return leaderboardArray;
 }
 
+const clearButton = document.querySelector("#clear-button");
 clearButton.addEventListener("click", clearHighscores);
-//clear high score
+
+//clear local storage & display empty leaderboard
 function clearHighscores() {
   localStorage.clear();
   renderLeaderboard();
 }
 
+const backButton = document.querySelector("#back-button");
 backButton.addEventListener("click", returnToStart);
 
-//show start box
+//Hide leaderboard card. show start card
 function returnToStart() {
-  hideBoxs();
+  hideCards();
   startCard.removeAttribute("hidden");
 }
 
-//use link to view highscores from any where on the page
+//use link to view highscores from any point on the page
 const leaderboardLink = document.querySelector("#leaderboard-link");
 leaderboardLink.addEventListener("click", showLeaderboard);
 
 function showLeaderboard() {
-  hideBoxs();
+  hideCards();
   leaderboardCard.removeAttribute("hidden");
+
   //stop countdown
   clearInterval(intervalID);
-  //assign undefined to time and display that, so that time does not appear on page
+
+  //assign undefined to time & display , time doesnt appear on page
   time = undefined;
   displayTime();
-  //display leaderboard
+
+  //display leaderboard card
   renderLeaderboard();
 }
-

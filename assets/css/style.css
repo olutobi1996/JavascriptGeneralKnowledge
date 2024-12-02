@@ -45,9 +45,9 @@ main {
   display: inline-flex;
 }
 
-/* Box styles */
+/* Card styles */
 
-.box {
+.card {
   max-width: 90%;
   margin-top: 20vh;
   border: solid;
