@@ -1,24 +1,25 @@
 # Quiz Game
  Quiz game is a site that hopes to demonstrate how pure JavaScript works in a real-world context. The site will be targeted toward people who not only love to implement more advanced JavaScript concepts but also general knowledge questions. Quiz Game is a fully responsive JavaScript Quiz Game that will allow users to challenge their general knowledge. It does this by asking the user of the website 6 random general knowledge quiz questions.
 
-![Screenshot-General-Knowledge-Quiz]
+![image](https://github.com/user-attachments/assets/f7b2ffef-c7ae-4ea3-8922-d15f8903a1eb)
+
 
 
 ### Existing Features
 
-The Quiz Game Logo and Heading
+The Quiz Game Homepage and Heading
 
-Featured at the top of the page, the Quiz Game logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game.
+Featured in the middle of the page, the Quiz Game logo and heading is easy to see for the user. Upon viewing the page, the user will be able to see the name of the game with a little message saying "Every incorrect answers will effect your score/time by ten seconds! GOOD LUCK!". I Have created this in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript. H2 and P elements have been used for the text.
 
-
+![image](https://github.com/user-attachments/assets/f7b2ffef-c7ae-4ea3-8922-d15f8903a1eb)
 
 
 - __The Question Section__
 
 -This section will allow the user to play the quiz game. The user will be able to easily see the questions for the quiz game.
--The user will be able to select the question answer of there choice below the question.
+-The user will be able to select the question answer of there choice below the question, i have used a multiple choice layout format. Also as an addition to make the quiz more exciting i have used a javascript time function, everytime the user answers the question wrong there time will be effected. I Have also created the question section in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript.
 
-![image](https://github.com/user-attachments/assets/e194f77f-00c3-4e7d-b604-edcba58b186c)
+![image](https://github.com/user-attachments/assets/5e3a4846-9f39-499a-89d0-bbb0cc1f512b)
 
 
 -  __The Game Area__
