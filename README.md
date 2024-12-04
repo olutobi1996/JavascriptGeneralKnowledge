@@ -17,45 +17,34 @@ Featured in the middle of the page, the Quiz Game logo and heading is easy to se
 - __The Question Section__
 
 -This section will allow the user to play the quiz game. The user will be able to easily see the questions for the quiz game.
--The user will be able to select the question answer of there choice below the question, i have used a multiple choice layout format. Also as an addition to make the quiz more exciting i have used a javascript time function, everytime the user answers the question wrong there time will be effected. I Have also created the question section in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript.
+-The user will be able to select the question answer of there choice below the question, i have used a multiple choice layout format. Also as an addition to make the quiz more exciting i have used a javascript time function, everytime the user answers the question wrong there time will be effected by 10s. I Have also created the question section in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript.
 
 ![image](https://github.com/user-attachments/assets/5e3a4846-9f39-499a-89d0-bbb0cc1f512b)
 
 
--  __The Game Area__
-
--The question section is where the user will be able to see the general knowledge quiz questions to answer as part of the game. The user will be able answer the questions in the answer box provided as multiple choice.
--The user will be able to submit their answer by clicking there question of choice and a flash of green or red will make it known to the user if they answered correctly.
--Theres also a next button for the user to click to move to the next question.
-
-![image](https://github.com/user-attachments/assets/0b38fa59-b367-4ada-8c89-69e98f1b66c4)
-
-
 - __The Score Area__
 
--This section will allow the user to see exactly how many correct and incorrect answers they have provided out of 8, with the correct answer button turning green and incorrect answer button will turn red.
+When the quiz has finished by either time running out or questions are finished, you will be automatically shown a message saying "Well done". Beneth this message you will be shown a message saying "your final score is...(whatever your final score is"). Then beneth this message you will be given a message saying "Enter your initials" with a text box to enter in your initals, also if you do not enter your initials you will be given a pop up message aswell saying "Please enter your initials before pressing submit!". 
 
-![image](https://github.com/user-attachments/assets/715ab0b9-b295-4686-88b7-59ec0610f664)
+![image](https://github.com/user-attachments/assets/f0fd243e-c74a-43d9-9212-1cdab08195b7)
 
- __Restart Quiz Button__
--This section will allow the user to see to have a choice at the end of the game when they have had there scored appear to choose wether they would like to restart the quiz or not.
-
-
+![image](https://github.com/user-attachments/assets/0334cae6-d700-43d9-8934-72cbeb79a234)
 
  __Quiz Timer__
 
 -This section the user will see a timer count down from 60seconds and will have this amount of time to finish the quiz otherwise an alert will appear.
 
+![image](https://github.com/user-attachments/assets/e2cbf601-fc50-460b-b2eb-9397cbf32874)
 
 
-
-__Alert Message__
+ __Highscores & Restart Quiz__
 - When the user has ran out of time a pop up message saying "Sorry You Have Ran Out Of Time" will appear on the quiz at the top and there time has ran out.
-
-
+![image](https://github.com/user-attachments/assets/4d71a83b-c506-4407-8abd-665fd8c3f36e)
+![image](https://github.com/user-attachments/assets/ca121b0a-add6-4965-b163-20977a057a87)
 
 __Footer__
 - I have added my personal details with my name and email at the bottom of the quiz for anybody who would like to speak to me personally about the game and is interested in my work.
+![image](https://github.com/user-attachments/assets/9144131a-0316-478b-9324-e5edd51b2081)
 
 ### Manual Testing Steps
 The final general knowledge quiz has made a few adjustments since the first deployment, here i explaina manual testing walkthrough to the quiz.
