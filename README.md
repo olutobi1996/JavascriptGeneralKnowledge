@@ -32,46 +32,42 @@ When the quiz has finished by either time running out or questions are finished,
 
  __Quiz Timer__
 
--This section the user will see a timer count down from 60seconds and will have this amount of time to finish the quiz otherwise an alert will appear.
+-This section the user will see a timer count down from 60seconds in the top right of the page, this is the amount of time the user will have to finish unless they get there questions wrong which means there time will be penelized. I have created the time function in my javascript using an if loop.
 
 ![image](https://github.com/user-attachments/assets/e2cbf601-fc50-460b-b2eb-9397cbf32874)
 
 
  __Highscores & Restart Quiz__
-- When the user has ran out of time a pop up message saying "Sorry You Have Ran Out Of Time" will appear on the quiz at the top and there time has ran out.
+-I have created a leaderboard function where the score will be stored in locallly in a JSON file storage, this leaderboard function will allow other users to use the quiz and there scores to be stored. I have also used a get Leaderboard function to get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse. This will use an if loop to check if the leaderboard is equal to null. I Also have a sort leaderboard and render leaderboard fucntion which will use document query selector to find highscores and display it while also using an if statement to sore the order of leaderboard.
 ![image](https://github.com/user-attachments/assets/4d71a83b-c506-4407-8abd-665fd8c3f36e)
 ![image](https://github.com/user-attachments/assets/ca121b0a-add6-4965-b163-20977a057a87)
 
 __Footer__
-- I have added my personal details with my name and email at the bottom of the quiz for anybody who would like to speak to me personally about the game and is interested in my work.
+- I have added my personal details with my name and email at the bottom of the quiz for anybody who would like to speak to me personally about the game and is interested in my work, this has been created in my index.html using mailto href.
 ![image](https://github.com/user-attachments/assets/9144131a-0316-478b-9324-e5edd51b2081)
 
 ### Manual Testing Steps
 | Testcase                          | Expected Result                                                       | Test Result |
 |-----------------------------------|-----------------------------------------------------------------------|-------------|
-| Open the Homepage                 | Homepage loads with the correct template and data                     | ✅ PASS          |
-| Register a user with valid data   | Request is successful, user is registered and logged in               | ✅ PASS          |
-| Register a user with invalid data | Request fails, form loads again with data and errors                  | ✅ PASS          |
-| Login a user with valid data      | Request is successful, user is logged in                              | ✅ PASS          |
-| Login a user with invalid data    | Request fails, form loads again with data and errors                  | ✅ PASS          |
-| Open an article by clicking       | Article Detail page loads with correct template and data              | ✅ PASS          |
-| Open an article through url       | Article Detail page loads with correct template and data              | ✅ PASS          |
-| Open an article with invalid url  | 404 Error page is shown                                               | ✅ PASS          |
-| Liking an article                 | Like count increases and like button changes                          | ✅ PASS          |
-| Unliking an article               | Like count decreases and like button changes                          | ✅ PASS          |
-| **Commenting**                    |                                                                       |             |
-| Writing a comment                 | Request is successful, comment is added to the list, message is shown | ✅ PASS          |
-| Editing a comment                 | Request is successful, comment content is edited, message is shown    | ✅ PASS          |
-| Delete a comment                  | Request is successful, comment is deleted, message is shown           | ✅ PASS          |
-| **Unauthorised requests**         |                                                                       |             |
-| Liking an article                 | Request fails, redirect to login page                                 | ✅ PASS          |
-| Writing a comment                 | Request fails, redirect to login page                                 | ✅ PASS          |
-| Editing a comment                 | Request fails, redirect to login page                                 | ✅ PASS          |
-| Delete a comment                  | Request fails, redirect to login page                                 | ✅ PASS          |
+| Open the Quiz                     | The Quiz loads with the correct template and data                     | ✅ PASS          |
+| Start Quiz                        | Start Quiz button is successful, quiz appears for user                | ✅ PASS          |
+| User clicks question              | Correct answer is chose and incorrect answer time will be penlized    | ✅ PASS          |
+| Timer                             | Timer runs down from 60seconds and if answer is incorrect, time effect| ✅ PASS          |
+| Enter user initials               | Pop up message will appear if user doesnt enter details               | ✅ PASS          |
+| View Highscores                   | View Highscores link in top left of page takes you to leaderboard     | ✅ PASS          |
+|Go Back                            | Go back button takes you back to start of quiz                        | ✅ PASS          |
+|Clear Highscores                   | Clear high scores will clear away all high scores on the page         | ✅ PASS          |
+| Email Link                        | Click the link and it takes you to mail options                        | ✅ PASS          |
+|                              
+| **Testing**                       |                                                                       |             |
+| HTML                              | HTML Validator Testing Passed                                         | ✅ PASS          |
+| CSS                               | CSS Validator Testing Passed                                          | ✅ PASS          |
+| Javascript                        | Javascript Validator Testing Passed                                   | ✅ PASS          |
+
 
 ### Features Left to Implement
 
-- Another feature idea for the future of the website is to do add more questions if the user gets them all correct.
+- Another feature idea for the future of the website is to do add more questions if the user gets them all correct and everytime the user gets them correct the time will go up.
 
 ## Testing 
 
@@ -80,11 +76,11 @@ __Footer__
 ## Questions & Answers
 - Starting with the questions and answers, i had a slight issue at the start with displaying the answers as during the start i had both the answer buttons i created in html and also there answers i had created in javascript, after putting the answers into the correct function i was able to over come this.
 - 
-## Submit Button
-- I then also had issues with my submit button, i was able to display the submit button in the browser but it wouldnt work, I overcame this problem by instead of a submit button i used an event listner when the user clicked there answer along with display/block so that the user wasnt able to change there answer once chosen.
+## Clear Score Function
+- I then also had issues with my clear score button, i was able to display the clear score button in the browser but it wouldnt work, I overcame this problem by fixing the clear score function in my javascript.
 
-### Updated Quiz Game
-- This new version of my quiz game has been updated newer version for the users, with a header element at the top of the page and below the header i have included a quiz game icon, below that we have the questions of the quiz with new questions. Below the questions we have an updated score with different color format and also a timer of 60seconds for the user to complete the quiz, with a message that pops up and alerts the user when time has ran out. To finish off at the bottom of the page there is my personal details within the footer element for any user who would like to get in contact and see my other work.
+### Start Quiz Function
+- I also had some issues with start quiz function it wasnt doing anything and one point. I found out i hadnt been calling it in my correct function and used the advent listner so when the user would click it, there would be interactivity.
 
 ### Validator Testing 
 
