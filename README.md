@@ -85,9 +85,9 @@ __Footer__
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator]https://validator.w3.org/nu/?doc=https%3A%2F%2Folutobi1996.github.io%2FGeneral-Knowledge-Quiz%2F
+  - No errors were returned when passing through the official [W3C validator]
 - CSS
-  - No errors were found when passing through the official [(Jigsaw)]https://jigsaw.w3.org/css-validator/validator?uri=+https%3A%2F%2Folutobi1996.github.io%2FGeneral-Knowledge-Quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+  - No errors were found when passing through the official [(Jigsaw)]
 
 - JavaScript
 No errors were found when passing through the official Jshint validator
@@ -99,7 +99,7 @@ Largest function has 9 statements in it, while the median is 5.
 The most complex function has a cyclomatic complexity value of 2 while the median is 2.
 
 ### Unfixed Bugs
-There were no unfixed bugs in the final code but for days i had "favicon error" in devtools as i havent added a favicon for this project as there were no icons necessary. Also in JSHint there were version errors found, if the software was not up to date the javascript on that particular machine may not work.
+There were no unfixed bugs in the final code. But in JSHint there were version errors found, if the software was not up to date the javascript on that particular machine may not work.
 
 ## Deployment
 
@@ -110,19 +110,14 @@ This section should describe the process you went through to deploy the project 
   - From the source section drop-down menu, select the main branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://olutobi1996.github.io/General-Knowledge-Quiz/
+The live link can be found here - https://8000-olutobi1996-javascriptg-r0heca27x2q.ws-eu117.gitpod.io/
 
 
 ## Credits 
-The general knowledge quiz was partly inspired by code institue project module walk through 2, this project i done as a practice walk through helped me get more understanding on how javascript worked. As this is a completely new language for me it helped me go through back through the javascript essentials module and get more understanding on how to write functions, call functions and correct syntax of writing variables and different elements for the quiz game. As you can see in my script.js code i have referenced what functions were inspired by the code institute love maths walk through project. 
+The general knowledge quiz was partly inspired by code institue project module walk through 2, this project i done as a practice walk through helped me get more understanding on how javascript worked. As this is a completely new language for me it helped me go through back through the javascript essentials module and get more understanding on how to write functions, call functions and correct syntax of writing variables and different elements for the quiz game.
 
 ### Content 
-
-- The layout style was inspired by(https://www.youtube.com/watch?v=PBcqGxrr9g8) & (https://codeinstitue.com/)
-- The text styling was used from https://fonts.google.com/
 - General Knowledge Quiz Questions were made up by me
 
-### Media
-
-- Both of the photos used on the page are used from https://www.pexels.com/
-- This site is a free image website
+### Media 
+https://mailtrap.io/blog/mailto-links-explained/ - i used this for my footer element for people to email me.

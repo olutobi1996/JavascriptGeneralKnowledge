@@ -1,22 +1,19 @@
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="./assets/css/style.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
    <title>Javascript Quiz</title>
-   <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
 
    <!-- Header at the top of the page -->
    <header>
-      <a id=leaderboard-link>View Highscores <i class="fas fa-hand-point-left fa-lg"></i>
-         </i></a>
+      <a id=leaderboard-link>View Highscores</a>
 
-      <time>Time: <span id="time"></span></time>
+   <span id="time"></span>
    </header>
 
    <main>
@@ -24,9 +21,9 @@
       <!-- Start Card -->
       <div id=start-card class="card">
          <h2 id=title>General Knowledge Quiz</h2>
-         <p>Try to answer to following General Knowledge questions within the time limit. <br><br>Every 
+         <p>Try to answer to following General Knowledge questions within the time limit. <br><br>Every
             incorrect answers will effect your score/time by ten seconds!
-         GOOD LUCK!</p>
+            GOOD LUCK!</p>
          <button id=start-button class="button">Start Quiz</button>
       </div>
 
@@ -35,7 +32,7 @@
 
          <!-- Quiz Question & Options -->
 
-         <h2 id=question-text></h2>
+         <h2 id=question-text>...</h2>
 
          <div id=quiz-options>
             <button id=option0 class="button option-button"></button>
@@ -85,7 +82,6 @@
       <p>Creator: Olutobi Adebayo-Rowling<br>
          <a href="mailto:olutobi1997@icloud.com">olutobi1997@icloud.com</a>
       </p>
-      </ul>
    </footer>
 
 
