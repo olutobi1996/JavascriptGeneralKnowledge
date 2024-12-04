@@ -14,17 +14,17 @@ Featured in the middle of the page, the Quiz Game logo and heading is easy to se
 ![image](https://github.com/user-attachments/assets/f7b2ffef-c7ae-4ea3-8922-d15f8903a1eb)
 
 
-- __The Question Section__
+- __The Question & Answer Section__
 
 -This section will allow the user to play the quiz game. The user will be able to easily see the questions for the quiz game.
--The user will be able to select the question answer of there choice below the question, i have used a multiple choice layout format. Also as an addition to make the quiz more exciting i have used a javascript time function, everytime the user answers the question wrong there time will be effected by 10s. I Have also created the question section in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript.
+-The user will be able to select the question answer of there choice below the question, i have used a multiple choice layout format. Also as an addition to make the quiz more exciting i have used a javascript time function, everytime the user answers the question wrong there time will be effected by 10s. I Have also created the question section in my index.html using a div element and within div element i have used ids that can be styled and called in css & javascript. The answers have also been created using option buttons in my index.html and check answer (event object) function has been created using an if statment to check the users answer is correct 
 
 ![image](https://github.com/user-attachments/assets/5e3a4846-9f39-499a-89d0-bbb0cc1f512b)
 
 
 - __The Score Area__
 
-When the quiz has finished by either time running out or questions are finished, you will be automatically shown a message saying "Well done". Beneth this message you will be shown a message saying "your final score is...(whatever your final score is"). Then beneth this message you will be given a message saying "Enter your initials" with a text box to enter in your initals, also if you do not enter your initials you will be given a pop up message aswell saying "Please enter your initials before pressing submit!". 
+When the quiz has finished by either time running out or questions are finished, you will be automatically shown a message saying "Well done". Beneth this message you will be shown a message saying "your final score is...(whatever your final score is"). Then beneth this message you will be given a message saying "Enter your initials" with a text box to enter in your initals, also if you do not enter your initials you will be given a pop up message aswell saying "Please enter your initials before pressing submit!". I have used index.html to create my div element with ids in it & one of these ids are hidden id that will be called in my javascript. Within the div element i have created another h2 and p element for the text that the user sees. I have then styled these in my css. I have then created an end quiz function in my js and have called the hidden attribute and hide cards attribue to clear any visable cards at the end of the quiz and show the the final score. I also used a if loop for the submit initals text inside a storescore function and also within this prevent default to prevent behaviour of form submission.
 
 ![image](https://github.com/user-attachments/assets/f0fd243e-c74a-43d9-9212-1cdab08195b7)
 
@@ -47,19 +47,27 @@ __Footer__
 ![image](https://github.com/user-attachments/assets/9144131a-0316-478b-9324-e5edd51b2081)
 
 ### Manual Testing Steps
-The final general knowledge quiz has made a few adjustments since the first deployment, here i explaina manual testing walkthrough to the quiz.
-
-When the user joins the website they will be be shown a block displaying the placeholder text "enter first name" & "enter last name" and a "welcome button" one the user has entered there first name and last name and press the welcome button they will be taken to the general knowledge quiz.
-
-Once at the general knowledge quiz they will be shown the question and 4 answers (multiple choice question), below this there will be a "restart Quiz" button they can use at any point, incase they click the wrong answer or just wanted to start again.There will also be  with there score displaying at the bottom out of 8 and the timer going simultaneously. Below will also show the creator of the quiz and they will have a link to my email also.
-
-Now at the game playing stage the user will be able to choose 1 out of the 4 answers they think is right, as they hover over the question with there mouse the curser pointer will be shown and there question that they hover over will change colour, this helps the user know they are clicking the right answer they choose. After they have clicked there answer the question they choose will be either red or green showing the user if they have the right answer or not straight away.
-
-During the quiz the user will have 60s to complete the quiz, if they fail to complete this in time the timer will run out and a pop up message will apear saying "Your Time Is Up, Sorry!". Once this appears the quiz will freeze and they will no be able to continue, once they have clicked the ok button on the pop up message the quiz will return to the start and restart quiz function will have been initiated.
-
-If the user gets to the end of the quiz in time there will be another block message that gives the user a "congratulations you finished the quiz" message and there score out of 8. They will will also have the option to continue again to replay the quiz with the restart quiz button.
-
-This is my manual testing steps guide for users who would like to enjoy the quiz i created, thank you i hope you enjoy!
+| Testcase                          | Expected Result                                                       | Test Result |
+|-----------------------------------|-----------------------------------------------------------------------|-------------|
+| Open the Homepage                 | Homepage loads with the correct template and data                     | ✅ PASS          |
+| Register a user with valid data   | Request is successful, user is registered and logged in               | ✅ PASS          |
+| Register a user with invalid data | Request fails, form loads again with data and errors                  | ✅ PASS          |
+| Login a user with valid data      | Request is successful, user is logged in                              | ✅ PASS          |
+| Login a user with invalid data    | Request fails, form loads again with data and errors                  | ✅ PASS          |
+| Open an article by clicking       | Article Detail page loads with correct template and data              | ✅ PASS          |
+| Open an article through url       | Article Detail page loads with correct template and data              | ✅ PASS          |
+| Open an article with invalid url  | 404 Error page is shown                                               | ✅ PASS          |
+| Liking an article                 | Like count increases and like button changes                          | ✅ PASS          |
+| Unliking an article               | Like count decreases and like button changes                          | ✅ PASS          |
+| **Commenting**                    |                                                                       |             |
+| Writing a comment                 | Request is successful, comment is added to the list, message is shown | ✅ PASS          |
+| Editing a comment                 | Request is successful, comment content is edited, message is shown    | ✅ PASS          |
+| Delete a comment                  | Request is successful, comment is deleted, message is shown           | ✅ PASS          |
+| **Unauthorised requests**         |                                                                       |             |
+| Liking an article                 | Request fails, redirect to login page                                 | ✅ PASS          |
+| Writing a comment                 | Request fails, redirect to login page                                 | ✅ PASS          |
+| Editing a comment                 | Request fails, redirect to login page                                 | ✅ PASS          |
+| Delete a comment                  | Request fails, redirect to login page                                 | ✅ PASS          |
 
 ### Features Left to Implement
 
