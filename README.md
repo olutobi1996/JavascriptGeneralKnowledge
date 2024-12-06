@@ -85,9 +85,9 @@ __Footer__
 ### Validator Testing 
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator] https://validator.w3.org/nu/#textarea
+  - No errors were returned when passing through the official [W3C validator] https://validator.w3.org/nu/?doc=https%3A%2F%2Folutobi1996.github.io%2FJavascriptGeneralKnowledge%2F
 - CSS
-  - No errors were found when passing through the official [(Jigsaw)]
+  - No errors were found when passing through the official [(Jigsaw)] https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Folutobi1996.github.io%2FJavascriptGeneralKnowledge%2F
 
 - JavaScript
 No errors were found when passing through the official Jshint validator

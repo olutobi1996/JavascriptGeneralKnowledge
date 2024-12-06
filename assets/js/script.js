@@ -224,11 +224,10 @@ function updateStoredLeaderboard(leaderboardItem) {
 //get "leaderboardArray" from local storage (if it exists) and parse it into a javascript object using JSON.parse
 function getLeaderboard() {
   let storedLeaderboard = localStorage.getItem("leaderboardArray");
+  let leaderboardArray = [];
   if (storedLeaderboard !== null) {
-    let leaderboardArray = JSON.parse(storedLeaderboard);
+    leaderboardArray = JSON.parse(storedLeaderboard);
     return leaderboardArray;
-  } else {
-    leaderboardArray = [];
   }
   return leaderboardArray;
 }
