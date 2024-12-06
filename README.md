@@ -92,11 +92,7 @@ __Footer__
 - JavaScript
 No errors were found when passing through the official Jshint validator
 The following metrics were returned:
-There are 7 functions in this file.
-Function with the largest signature take 1 arguments, while the median is 0.
-Largest function has 9 statements in it, while the median is 5.
-
-The most complex function has a cyclomatic complexity value of 2 while the median is 2.
+![image](https://github.com/user-attachments/assets/dddf5ef9-a26d-43f7-b975-e33b16f235da)
 
 ### Unfixed Bugs
 There were no unfixed bugs in the final code. But in JSHint there were version errors found, if the software was not up to date the javascript on that particular machine may not work.
