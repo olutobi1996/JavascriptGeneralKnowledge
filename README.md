@@ -110,7 +110,7 @@ This section should describe the process you went through to deploy the project 
   - From the source section drop-down menu, select the main branch
   - Once the main branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://8000-olutobi1996-javascriptg-r0heca27x2q.ws-eu117.gitpod.io/
+The live link can be found here - https://olutobi1996.github.io/JavascriptGeneralKnowledge/
 
 
 ## Credits 
